@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Revela Seu Anjo da Guarda — Quiz Sagrado</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1468329457735681');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1468329457735681&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  ttq.load('D83384RC77U6I10KIUBG');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --gold: #F8E5B0;
+    --gold-light: #FFF5E0;
+    --gold-dark: #8B6914;
+    --red: #C0392B;
+    --red-bright: #E74C3C;
+    --dark: #0A0705;
+    --dark2: #130E08;
+    --cream: #F5F0E8;
+    --white: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { min-height: 100%; }
+  body {
+    color: var(--cream); font-family: 'Lora', Georgia, serif;
+    overflow-x: hidden;
+    background: radial-gradient(ellipse at 50% 0%, #2A1908 0%, #160E08 60%);
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1; opacity: 0.4;
+  }
+  .rays {
+    position: fixed; top: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 900px; height: 420px; pointer-events: none; opacity: 0.06; z-index: 1;
+  }
+
+  .shell {
+    position: relative; z-index: 2;
+    max-width: 640px; margin: 0 auto; padding: 40px 20px 60px;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  .brand {
+    text-align: center; font-family: 'Cinzel', serif;
+    font-size: 12px; letter-spacing: 5px; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 30px;
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    text-shadow: 0 0 8px rgba(245,220,145,0.85), 0 0 20px rgba(240,208,128,0.4);
+  }
+  .brand::before, .brand::after {
+    content: ''; flex: 0 0 40px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
+  }
+  .progress {
+    width: 100%; max-width: 380px; margin: 0 auto 24px;
+    height: 4px; background: rgba(201,168,76,0.15); border-radius: 2px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+    width: 0%; transition: width 0.6s ease; box-shadow: 0 0 12px rgba(240,208,128,0.5);
+  }
+  .step-indicator {
+    text-align: center; font-family: 'Cinzel', serif; font-size: 11px;
+    letter-spacing: 3px; color: #E8DBC4; text-transform: uppercase; margin-bottom: 28px;
+    text-shadow: 0 0 8px rgba(245,220,145,0.85), 0 0 20px rgba(240,208,128,0.4);
+  }
+
+  .step { display: none; animation: fadeUp 0.6s ease forwards; }
+  .step.active { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  .step-eyebrow {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--gold); text-align: center; margin-bottom: 18px;
+    text-shadow: 0 0 8px rgba(245,220,145,0.85), 0 0 20px rgba(240,208,128,0.4);
+  }
+  .step-title {
+    font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 34px); font-weight: 900;
+    line-height: 1.25; color: var(--white); text-align: center; margin-bottom: 14px;
+  }
+  .step-title .gold { color: var(--gold-light); }
+  .step-sub {
+    font-size: clamp(14px, 1.9vw, 16px); color: #EDDDC0; text-align: center;
+    line-height: 1.7; font-style: italic; max-width: 520px; margin: 0 auto 32px;
+  }
+
+  /* Field input */
+  .field-wrap { max-width: 460px; margin: 0 auto; }
+  .field-label {
+    display: block; font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 2px;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 10px; text-align: center;
+    text-shadow: 0 0 8px rgba(245,220,145,0.85), 0 0 20px rgba(240,208,128,0.4);
+  }
+  .input-text {
+    width: 100%; padding: 18px 20px;
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 6px;
+    color: var(--white); font-family: 'Lora', serif; font-size: 18px;
+    text-align: center; letter-spacing: 0.5px;
+    transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  }
+  .input-text::placeholder { color: #8E7C66; font-style: italic; }
+  .input-text:focus {
+    outline: none; border-color: var(--gold-light);
+    background: rgba(201,168,76,0.1);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.18);
+  }
+  .date-grid { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 10px; }
+
+  /* Custom dropdown */
+  .dd { position: relative; }
+  .dd-trigger {
+    width: 100%; padding: 18px 14px;
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 6px;
+    color: var(--white); font-family: 'Lora', serif; font-size: 16px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    transition: all 0.2s;
+  }
+  .dd.open .dd-trigger, .dd-trigger:hover {
+    border-color: var(--gold-light); background: rgba(201,168,76,0.1);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.18);
+  }
+  .dd-value { color: var(--white); }
+  .dd[data-value=""] .dd-value { color: #8E7C66; font-style: italic; }
+  .dd-caret { color: var(--gold); font-size: 11px; transition: transform 0.2s; }
+  .dd.open .dd-caret { transform: rotate(180deg); }
+  .dd-panel {
+    display: none; position: absolute; top: calc(100% + 6px); left: 0; right: 0;
+    background: #130E08;
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 6px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.85);
+    max-height: 240px; overflow-y: auto;
+    z-index: 50;
+    -webkit-overflow-scrolling: touch;
+  }
+  .dd.open .dd-panel { display: block; animation: ddOpen 0.18s ease; }
+  @keyframes ddOpen { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+  .dd-option {
+    display: block; width: 100%;
+    padding: 12px 14px; background: transparent; border: none;
+    color: var(--cream); font-family: 'Lora', serif; font-size: 16px;
+    text-align: center; cursor: pointer;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    transition: background 0.15s, color 0.15s;
+  }
+  .dd-option:last-child { border-bottom: none; }
+  .dd-option:hover, .dd-option:focus { outline: none; background: rgba(201,168,76,0.12); color: var(--gold-light); }
+  .dd-option.selected { background: rgba(201,168,76,0.2); color: var(--gold-light); }
+  .field-error {
+    color: var(--red-bright); font-size: 13px; text-align: center;
+    margin-top: 10px; min-height: 20px; font-style: italic;
+  }
+
+  /* OPTION CARDS (Barnum / signs / scenes) */
+  .options { max-width: 540px; margin: 0 auto; display: flex; flex-direction: column; gap: 11px; }
+  .option {
+    width: 100%;
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, rgba(201,168,76,0.02) 100%);
+    border: 1.5px solid rgba(201,168,76,0.3);
+    border-radius: 8px;
+    color: var(--cream); font-family: 'Lora', serif; font-size: 15px;
+    text-align: left; cursor: pointer; line-height: 1.55;
+    transition: all 0.2s ease;
+  }
+  .option:hover {
+    border-color: var(--gold-light);
+    background: linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.05) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(240,208,128,0.15);
+  }
+  .option .marker {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid rgba(201,168,76,0.5);
+    flex-shrink: 0; margin-top: 2px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  .option .marker::after {
+    content: ''; width: 10px; height: 10px; border-radius: 50%;
+    background: var(--gold-light); transform: scale(0);
+    transition: transform 0.2s;
+    box-shadow: 0 0 12px rgba(240,208,128,0.7);
+  }
+  .option.selected {
+    border-color: var(--gold-light);
+    background: linear-gradient(135deg, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.08) 100%);
+    box-shadow: 0 0 24px rgba(240,208,128,0.2), 0 8px 24px rgba(0,0,0,0.5);
+  }
+  .option.selected .marker { border-color: var(--gold-light); }
+  .option.selected .marker::after { transform: scale(1); }
+
+  /* CTA */
+  .cta-btn {
+    display: block; margin: 30px auto 0; width: 100%; max-width: 460px;
+    background: linear-gradient(135deg, #2BAC22 0%, #1F7D18 100%); color: white;
+    font-family: 'Cinzel', serif; font-size: clamp(15px, 2.4vw, 19px); font-weight: 700;
+    padding: 20px 32px; border-radius: 6px; text-decoration: none; letter-spacing: 1px;
+    text-align: center; line-height: 1.35;
+    box-shadow: 0 8px 30px rgba(43,172,34,0.45), 0 0 0 1px rgba(201,168,76,0.3);
+    transition: all 0.2s; position: relative; overflow: hidden; cursor: pointer;
+    border: 2px solid #37D12C;
+  }
+  .cta-btn::before {
+    content: ''; position: absolute; top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    animation: shimmer 2.5s infinite;
+  }
+  @keyframes shimmer { 0% { left: -100%; } 100% { left: 100%; } }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(43,172,34,0.7), 0 0 0 1px rgba(201,168,76,0.5); }
+  .cta-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  .back-link {
+    display: block; text-align: center; margin-top: 20px;
+    color: #E8DBC4; font-size: 13px; text-decoration: none;
+    letter-spacing: 1px; cursor: pointer; background: none; border: none;
+    font-family: 'Lora', serif; font-style: italic;
+  }
+  .back-link:hover { color: var(--gold); }
+
+  /* RORSCHACH (Step 6) — sub-states */
+  .ror-instruction {
+    max-width: 560px; margin: 0 auto;
+    background: linear-gradient(135deg, #15100A 0%, #0F0A04 100%);
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 8px;
+    padding: 32px 28px;
+    box-shadow: 0 0 60px rgba(201,168,76,0.15), 0 18px 50px rgba(0,0,0,0.7);
+    text-align: center;
+  }
+  .ror-instruction p {
+    font-size: clamp(15px, 2vw, 17px); line-height: 1.85;
+    color: #EDDDC0; margin-bottom: 14px;
+  }
+  .ror-instruction p:last-of-type { margin-bottom: 24px; }
+  .ror-instruction strong { color: var(--gold-light); }
+  .ror-instruction em { color: var(--gold); font-style: italic; }
+
+  /* Image reveal screen — full bleed */
+  .ror-image-screen {
+    display: none;
+    position: fixed; inset: 0; z-index: 100;
+    background: #050402;
+    align-items: center; justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    animation: fadeIn 0.4s ease;
+  }
+  .ror-image-screen.active { display: flex; }
+  .ror-image-screen.fading { animation: fadeOut 0.5s ease forwards; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
+  .ror-image-screen img {
+    max-width: 90vw; max-height: 70vh;
+    border-radius: 12px;
+    border: 2px solid rgba(201,168,76,0.4);
+    box-shadow: 0 0 60px rgba(201,168,76,0.3), 0 0 200px rgba(0,0,0,0.9);
+    filter: sepia(0.15) saturate(0.95) contrast(1.05);
+  }
+  .ror-countdown {
+    margin-top: 24px;
+    font-family: 'Cinzel', serif; font-size: 48px; font-weight: 900;
+    color: var(--gold-light);
+    text-shadow: 0 0 20px rgba(240,208,128,0.7);
+    letter-spacing: 2px;
+  }
+
+  /* 4 object cards (sub-step 6c) */
+  .object-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    max-width: 460px; margin: 0 auto;
+  }
+  .object-card {
+    background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, rgba(201,168,76,0.02) 100%);
+    border: 1.5px solid rgba(201,168,76,0.3);
+    border-radius: 8px;
+    padding: 22px 14px 16px;
+    color: var(--cream); font-family: 'Cinzel', serif;
+    cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    transition: all 0.2s ease;
+  }
+  .object-card:hover {
+    border-color: var(--gold-light);
+    background: linear-gradient(135deg, rgba(201,168,76,0.14) 0%, rgba(201,168,76,0.06) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(240,208,128,0.2);
+  }
+  .object-icon {
+    width: 56px; height: 56px;
+    color: var(--gold-light);
+    filter: drop-shadow(0 0 12px rgba(240,208,128,0.4));
+  }
+  .object-icon svg { width: 100%; height: 100%; }
+  .object-label {
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold-light); font-weight: 700;
+  }
+  .ror-skip {
+    display: block; margin: 22px auto 0;
+    background: none; border: none;
+    color: #8E7C66; font-family: 'Lora', serif; font-size: 13px;
+    font-style: italic; cursor: pointer; text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .ror-skip:hover { color: var(--gold); }
+  .ror-attempt-note {
+    text-align: center;
+    font-size: 13px; color: #C0A877;
+    font-style: italic; margin: 14px auto 0;
+    max-width: 420px;
+  }
+
+  /* Loading */
+  .loading-wrap {
+    display: none; text-align: center; padding: 40px 20px;
+    flex: 1; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .loading-wrap.active { display: flex; animation: fadeUp 0.6s ease forwards; }
+  .halo-loader { position: relative; width: 140px; height: 140px; margin-bottom: 40px; }
+  .halo-ring {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: var(--gold-light); border-right-color: var(--gold);
+    animation: spin 1.6s linear infinite;
+  }
+  .halo-ring:nth-child(2) { inset: 12px; border-top-color: var(--gold); border-right-color: var(--gold-dark); animation: spin 2.2s linear infinite reverse; }
+  .halo-ring:nth-child(3) { inset: 26px; border-top-color: var(--gold-light); border-right-color: transparent; border-bottom-color: var(--gold); animation: spin 1.2s linear infinite; }
+  .halo-center {
+    position: absolute; inset: 40px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,208,128,0.6) 0%, rgba(201,168,76,0.15) 60%, transparent 100%);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  .halo-center::before {
+    content: '✦'; position: absolute; inset: 0; display: flex;
+    align-items: center; justify-content: center;
+    color: var(--gold-light); font-size: 32px;
+    text-shadow: 0 0 20px rgba(240,208,128,0.8);
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes pulse-glow { 0%, 100% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+  .loading-title {
+    font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 32px); font-weight: 900;
+    color: var(--white); margin-bottom: 12px; letter-spacing: 1px;
+  }
+  .loading-title .gold { color: var(--gold-light); }
+  .loading-sub {
+    font-size: clamp(15px, 2vw, 17px); color: #EDDDC0; font-style: italic;
+    line-height: 1.7; max-width: 460px; margin-bottom: 28px;
+  }
+  .loading-steps { max-width: 440px; width: 100%; text-align: left; margin: 0 auto; }
+  .loading-steps li {
+    list-style: none; padding: 9px 0; font-size: 14px; color: #8E7C66;
+    display: flex; align-items: center; gap: 12px;
+    border-bottom: 1px dashed rgba(201,168,76,0.12);
+    transition: color 0.4s ease;
+  }
+  .loading-steps li:last-child { border-bottom: none; }
+  .loading-steps li .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.3);
+    flex-shrink: 0; transition: all 0.4s;
+  }
+  .loading-steps li.done { color: var(--cream); }
+  .loading-steps li.done .dot { background: var(--gold-light); border-color: var(--gold-light); box-shadow: 0 0 10px rgba(240,208,128,0.6); }
+  .loading-steps li.active { color: var(--white); }
+  .loading-steps li.active .dot { border-color: var(--gold-light); animation: pulse-dot 1s ease-in-out infinite; }
+  @keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 0 rgba(240,208,128,0.6); } 50% { box-shadow: 0 0 0 6px rgba(240,208,128,0); } }
+
+  @media (max-width: 600px) {
+    .shell { padding: 30px 16px 50px; }
+    .date-grid { gap: 8px; }
+    .dd-trigger { padding: 16px 10px; font-size: 15px; }
+    .dd-option { padding: 14px 10px; font-size: 15px; }
+    .ror-instruction { padding: 24px 18px; }
+    .object-icon { width: 48px; height: 48px; }
+    .object-label { font-size: 12px; letter-spacing: 1.5px; }
+    .ror-countdown { font-size: 38px; }
+  }
+</style>
+</head>
+<body>
+
+<svg class="rays" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(400,0)">
+    <line x1="0" y1="0" x2="-400" y2="400" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="0" y1="0" x2="-300" y2="400" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="0" y1="0" x2="-200" y2="400" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="0" y1="0" x2="-100" y2="400" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="0" y1="0" x2="0"    y2="400" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="0" y1="0" x2="100"  y2="400" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="0" y1="0" x2="200"  y2="400" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="0" y1="0" x2="300"  y2="400" stroke="#C9A84C" stroke-width="1"/>
+    <line x1="0" y1="0" x2="400"  y2="400" stroke="#C9A84C" stroke-width="1"/>
+  </g>
+</svg>
+
+<main class="shell">
+  <div class="brand">O Chamado do Meu Anjo</div>
+
+  <div id="quiz-ui">
+    <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="step-indicator" id="stepIndicator">Passo 1 de 7</div>
+
+    <!-- STEP 1: NAME -->
+    <section class="step active" data-step="1">
+      <p class="step-eyebrow">✦ Quiz Sagrado — Começa a Revelação ✦</p>
+      <h1 class="step-title">Qual é o seu <span class="gold">primeiro nome?</span></h1>
+      <p class="step-sub">
+        Seu anjo da guarda conhece seu nome desde antes de você nascer.<br>
+        Escreva como sempre te chamaram.
+      </p>
+      <div class="field-wrap">
+        <label class="field-label" for="nameInput">Seu Primeiro Nome</label>
+        <input type="text" id="nameInput" class="input-text" placeholder="ex. Maria" autocomplete="given-name" maxlength="40">
+        <div class="field-error" id="nameError"></div>
+        <button class="cta-btn" id="step1Next" type="button">✦ CONTINUAR A REVELAÇÃO ✦</button>
+      </div>
+    </section>
+
+    <!-- STEP 2: DATE OF BIRTH -->
+    <section class="step" data-step="2">
+      <p class="step-eyebrow">✦ As Estrelas do Seu Nascimento ✦</p>
+      <h1 class="step-title">Quando <span class="gold">você nasceu?</span></h1>
+      <p class="step-sub">O dia em que você veio a este mundo é uma das chaves para identificar seu anjo da guarda.</p>
+      <div class="field-wrap">
+        <label class="field-label">Sua Data de Nascimento</label>
+        <div class="date-grid">
+          <div class="dd" data-name="day" data-value="">
+            <button class="dd-trigger" type="button"><span class="dd-value">Dia</span><span class="dd-caret">▾</span></button>
+            <div class="dd-panel"></div>
+          </div>
+          <div class="dd" data-name="month" data-value="">
+            <button class="dd-trigger" type="button"><span class="dd-value">Mês</span><span class="dd-caret">▾</span></button>
+            <div class="dd-panel"></div>
+          </div>
+          <div class="dd" data-name="year" data-value="">
+            <button class="dd-trigger" type="button"><span class="dd-value">Ano</span><span class="dd-caret">▾</span></button>
+            <div class="dd-panel"></div>
+          </div>
+        </div>
+        <div class="field-error" id="dobError"></div>
+        <button class="cta-btn" id="step2Next" type="button">✦ CONTINUAR A REVELAÇÃO ✦</button>
+        <button class="back-link" data-back="1" type="button">← Voltar</button>
+      </div>
+    </section>
+
+    <!-- STEP 3: SITUAÇÃO -->
+    <section class="step" data-step="3">
+      <p class="step-eyebrow">✦ O Que Seu Anjo Está Vendo ✦</p>
+      <h1 class="step-title">Qual dessas situações mais <span class="gold">ressoa</span> com você?</h1>
+      <p class="step-sub">Não pense — escolha a que sentir mais verdadeira.</p>
+      <div class="options" data-q="sensation">
+        <button class="option" type="button" data-value="prayers"><span class="marker"></span><span>Rezo todos os dias, mas sinto que as bênçãos nunca chegam onde precisam</span></button>
+        <button class="option" type="button" data-value="blocked"><span class="marker"></span><span>Faço minha parte, trabalho, me esforço — mas algo sempre trava no final</span></button>
+        <button class="option" type="button" data-value="doors"><span class="marker"></span><span>Tenho fé, mas me pergunto por que as portas continuam fechadas pra mim</span></button>
+        <button class="option" type="button" data-value="cycle"><span class="marker"></span><span>Sinto que estou preso num ciclo que não consigo quebrar sozinho</span></button>
+        <button class="option" type="button" data-value="all"><span class="marker"></span><span>Todas essas — é como se descrevessem exatamente o que vivo</span></button>
+      </div>
+      <button class="back-link" data-back="2" type="button">← Voltar</button>
+    </section>
+
+    <!-- STEP 4: SINAIS -->
+    <section class="step" data-step="4">
+      <p class="step-eyebrow">✦ Os Sinais do Seu Anjo ✦</p>
+      <h1 class="step-title">Você já viveu algum desses <span class="gold">momentos?</span></h1>
+      <p class="step-sub">Seu anjo da guarda age em silêncio. Escolha o que mais aconteceu com você.</p>
+      <div class="options" data-q="signs">
+        <button class="option" type="button" data-value="numbers"><span class="marker"></span><span>Vi horários repetidos no relógio e senti que não era coincidência</span></button>
+        <button class="option" type="button" data-value="danger"><span class="marker"></span><span>Escapei de um acidente ou perigo que não consigo explicar</span></button>
+        <button class="option" type="button" data-value="dream"><span class="marker"></span><span>Tive um sonho que pareceu real demais para ser só um sonho</span></button>
+        <button class="option" type="button" data-value="warmth"><span class="marker"></span><span>Senti um calor súbito no peito num momento de angústia ou oração</span></button>
+        <button class="option" type="button" data-value="all"><span class="marker"></span><span>Já vivi mais de um desses</span></button>
+      </div>
+      <button class="back-link" data-back="3" type="button">← Voltar</button>
+    </section>
+
+    <!-- STEP 5: RELAÇÃO COM DEUS -->
+    <section class="step" data-step="5">
+      <p class="step-eyebrow">✦ Sua Assinatura Espiritual ✦</p>
+      <h1 class="step-title">Como está sua relação com Deus <span class="gold">neste momento?</span></h1>
+      <p class="step-sub">Deixe o coração responder — não existe resposta errada.</p>
+      <div class="options" data-q="scene">
+        <button class="option" type="button" data-value="firm"><span class="marker"></span><span>Firme — oro e confio, mesmo quando sinto que não sou atendida</span></button>
+        <button class="option" type="button" data-value="seeking"><span class="marker"></span><span>Buscando — quero me aproximar, mas sinto distância</span></button>
+        <button class="option" type="button" data-value="returning"><span class="marker"></span><span>Renascendo — me afastei e estou voltando para casa</span></button>
+        <button class="option" type="button" data-value="shaken"><span class="marker"></span><span>Abalada — tenho dúvidas, mas não larguei a fé</span></button>
+        <button class="option" type="button" data-value="all"><span class="marker"></span><span>Todas essas — minha fé é complexa e real</span></button>
+      </div>
+      <button class="back-link" data-back="4" type="button">← Voltar</button>
+    </section>
+
+    <!-- STEP 6: SÍMBOLO -->
+    <section class="step" data-step="6">
+      <p class="step-eyebrow">✦ A Revelação Final ✦</p>
+      <h1 class="step-title">Qual símbolo sua alma <span class="gold">reconhece?</span></h1>
+      <p class="step-sub">Com base nas suas respostas, existem 4 arcanjos possíveis — cada um com um símbolo sagrado único. Qual desses 4 símbolos mais te chama atenção?</p>
+      <div class="object-grid">
+        <button class="object-card" type="button" data-value="sword">
+          <span class="object-icon">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M32 6 L36 42 L32 46 L28 42 Z" fill="currentColor" fill-opacity="0.25" stroke-width="1.8"/>
+              <line x1="17" y1="44" x2="47" y2="44" stroke-width="3" fill="none"/>
+              <line x1="32" y1="44" x2="32" y2="56" stroke-width="3" fill="none"/>
+              <circle cx="32" cy="59" r="4" fill="currentColor" fill-opacity="0.35" stroke-width="1.8"/>
+            </svg>
+          </span>
+          <span class="object-label">Espada</span>
+        </button>
+        <button class="object-card" type="button" data-value="trumpet">
+          <span class="object-icon">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 38 L36 28 L48 14"/>
+              <path d="M36 28 C38 34, 42 40, 52 46 C46 50, 38 48, 34 44"/>
+              <circle cx="12" cy="38" r="6"/>
+            </svg>
+          </span>
+          <span class="object-label">Trombeta</span>
+        </button>
+        <button class="object-card" type="button" data-value="harp">
+          <span class="object-icon">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 56 L16 12 C16 12, 32 8, 48 20 L48 56"/>
+              <line x1="16" y1="56" x2="48" y2="56"/>
+              <line x1="22" y1="22" x2="22" y2="52"/>
+              <line x1="29" y1="18" x2="29" y2="52"/>
+              <line x1="36" y1="20" x2="36" y2="52"/>
+              <line x1="43" y1="26" x2="43" y2="52"/>
+            </svg>
+          </span>
+          <span class="object-label">Harpa</span>
+        </button>
+        <button class="object-card" type="button" data-value="fish">
+          <span class="object-icon">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 32 C10 32, 20 18, 42 18 C52 18, 56 25, 56 32 C56 39, 52 46, 42 46 C20 46, 10 32, 10 32 Z"/>
+              <path d="M10 32 L4 22 M10 32 L4 42"/>
+              <circle cx="46" cy="28" r="2" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <span class="object-label">Peixe</span>
+        </button>
+      </div>
+      <button class="back-link" data-back="5" type="button">← Voltar</button>
+    </section>
+  </div>
+
+  <!-- LOADING (Step 7) -->
+  <div class="loading-wrap" id="loadingWrap">
+    <div class="halo-loader">
+      <div class="halo-ring"></div>
+      <div class="halo-ring"></div>
+      <div class="halo-ring"></div>
+      <div class="halo-center"></div>
+    </div>
+    <h2 class="loading-title">Revelando <span class="gold" id="loadingName">seu</span> anjo...</h2>
+    <p class="loading-sub">Por favor aguarde enquanto os céus se alinham e seu anjo da guarda é revelado.</p>
+    <ul class="loading-steps" id="loadingSteps">
+      <li><span class="dot"></span>Revisando suas respostas sagradas...</li>
+      <li><span class="dot"></span>Cruzando dados com o registro celestial...</li>
+      <li><span class="dot"></span>Decodificando sua frequência espiritual...</li>
+      <li><span class="dot"></span>Identificando o arcanjo que caminha com você...</li>
+      <li><span class="dot"></span>Confirmando seu nome sagrado...</li>
+      <li><span class="dot"></span>Preparando seu cântico personalizado...</li>
+      <li><span class="dot"></span>Abrindo a porta da revelação...</li>
+    </ul>
+  </div>
+</main>
+
+<script>
+  var TOTAL_STEPS = 7;
+  var state = { step: 1, name: '', dob: { d: '', m: '', y: '' }, answers: {} };
+
+  // ---------- DROPDOWNS ----------
+  var MONTHS = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+  function ddPopulate(name, options) {
+    var dd = document.querySelector('.dd[data-name="' + name + '"]');
+    if (!dd) return;
+    var panel = dd.querySelector('.dd-panel'); panel.innerHTML = '';
+    options.forEach(function(opt) {
+      var btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'dd-option';
+      btn.setAttribute('data-value', String(opt.value));
+      btn.textContent = opt.label;
+      panel.appendChild(btn);
+    });
+  }
+  function ddValue(name) { var dd = document.querySelector('.dd[data-name="' + name + '"]'); return dd ? (dd.dataset.value || '') : ''; }
+  function ddSet(dd, value, label) {
+    dd.dataset.value = value;
+    dd.querySelector('.dd-value').textContent = label;
+    dd.querySelectorAll('.dd-option').forEach(function(o) { o.classList.toggle('selected', o.getAttribute('data-value') === String(value)); });
+  }
+  function ddClose(dd) { dd.classList.remove('open'); }
+  function ddOpen(dd) {
+    document.querySelectorAll('.dd.open').forEach(function(o) { if (o !== dd) ddClose(o); });
+    dd.classList.add('open');
+  }
+  (function populateDates() {
+    ddPopulate('month', MONTHS.map(function(m, i) { return { value: i + 1, label: m }; }));
+    var days = []; for (var d = 1; d <= 31; d++) days.push({ value: d, label: String(d) });
+    ddPopulate('day', days);
+    var years = []; var nowY = new Date().getFullYear();
+    for (var y = nowY - 18; y >= nowY - 90; y--) years.push({ value: y, label: String(y) });
+    ddPopulate('year', years);
+  })();
+
+  document.addEventListener('click', function(e) {
+    var trigger = e.target.closest('.dd-trigger');
+    if (trigger) { var dd = trigger.closest('.dd'); if (dd.classList.contains('open')) ddClose(dd); else ddOpen(dd); return; }
+    var opt = e.target.closest('.dd-option');
+    if (opt) { var dd2 = opt.closest('.dd'); ddSet(dd2, opt.getAttribute('data-value'), opt.textContent); ddClose(dd2); setError('dobError', ''); return; }
+    if (!e.target.closest('.dd')) document.querySelectorAll('.dd.open').forEach(ddClose);
+  });
+
+  // ---------- NAVIGATION ----------
+  function showStep(n) {
+    state.step = n;
+    document.getElementById('quiz-ui').style.display = '';
+    document.querySelectorAll('#quiz-ui .step').forEach(function(el) {
+      el.classList.toggle('active', Number(el.dataset.step) === n);
+    });
+    document.getElementById('stepIndicator').textContent = 'Passo ' + n + ' de ' + TOTAL_STEPS;
+    document.getElementById('progressFill').style.width = Math.round((n / TOTAL_STEPS) * 100) + '%';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function setError(id, msg) { var el = document.getElementById(id); if (el) el.textContent = msg || ''; }
+
+  // ---------- STEP 1 ----------
+  var nameInput = document.getElementById('nameInput');
+  document.getElementById('step1Next').addEventListener('click', function() {
+    var v = (nameInput.value || '').trim();
+    if (v.length < 2) { setError('nameError', 'Por favor, escreva seu primeiro nome para que seu anjo te reconheça.'); nameInput.focus(); return; }
+    setError('nameError', ''); state.name = v;
+    try { sessionStorage.setItem('quiz_name', v); } catch (e) {}
+    showStep(2);
+  });
+  nameInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') { e.preventDefault(); document.getElementById('step1Next').click(); } });
+  nameInput.addEventListener('input', function() { if (nameInput.value.trim().length >= 2) setError('nameError', ''); });
+
+  // ---------- STEP 2 ----------
+  document.getElementById('step2Next').addEventListener('click', function() {
+    var m = ddValue('month'), d = ddValue('day'), y = ddValue('year');
+    if (!m || !d || !y) { setError('dobError', 'Por favor, selecione dia, mês e ano do seu nascimento.'); return; }
+    setError('dobError', ''); state.dob = { d: d, m: m, y: y };
+    try { sessionStorage.setItem('quiz_dob', y + '-' + m + '-' + d); } catch (e) {}
+    showStep(3);
+  });
+
+  // ---------- STEPS 3, 4, 5 (auto-advance multiple choice) ----------
+  document.querySelectorAll('.options').forEach(function(group) {
+    var qName = group.getAttribute('data-q');
+    group.querySelectorAll('.option').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        group.querySelectorAll('.option').forEach(function(o) { o.classList.remove('selected'); });
+        opt.classList.add('selected');
+        state.answers[qName] = opt.getAttribute('data-value');
+        try { sessionStorage.setItem('quiz_' + qName, state.answers[qName]); } catch (e) {}
+        setTimeout(function() {
+          var current = state.step;
+          if (current < 6) showStep(current + 1);
+        }, 320);
+      });
+    });
+  });
+
+  // Back buttons
+  document.querySelectorAll('[data-back]').forEach(function(btn) {
+    btn.addEventListener('click', function() { showStep(Number(btn.getAttribute('data-back'))); });
+  });
+
+  // ---------- STEP 6 — SÍMBOLO ----------
+  document.querySelectorAll('.object-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      state.answers.vision = card.getAttribute('data-value');
+      try { sessionStorage.setItem('quiz_vision', state.answers.vision); } catch (e) {}
+      startLoading();
+    });
+  });
+
+  // ---------- STEP 7 — LOADING -> REDIRECT ----------
+  function startLoading() {
+    document.getElementById('quiz-ui').style.display = 'none';
+    document.getElementById('progressFill').style.width = '100%';
+    document.getElementById('stepIndicator').textContent = 'Passo 7 de ' + TOTAL_STEPS;
+    var wrap = document.getElementById('loadingWrap');
+    wrap.classList.add('active');
+
+    var first = (state.name.split(/\s+/)[0] || 'tu');
+    document.getElementById('loadingName').textContent = 'de ' + first;
+
+    var steps = document.querySelectorAll('#loadingSteps li');
+    var i = 0;
+    steps[0].classList.add('active');
+    var tick = setInterval(function() {
+      steps[i].classList.remove('active'); steps[i].classList.add('done'); i++;
+      if (i < steps.length) steps[i].classList.add('active'); else clearInterval(tick);
+    }, 700);
+
+    setTimeout(function() {
+      var qs = window.location.search || '';
+      window.location.href = '../resultangel7br/index.html' + qs;
+    }, 5500);
+  }
+</script>
+
+<script>
+  ttq.track('ViewContent');
+</script>
+<script>
+  fbq('track', 'PageView');
+</script>
+</body>
+</html>

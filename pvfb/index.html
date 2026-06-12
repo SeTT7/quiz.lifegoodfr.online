@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Um Guia Devocional Cristão — Para Aprofundar sua Vida de Oração</title>
+<meta property="og:title" content="Um Guia Devocional Cristão">
+<meta property="og:description" content="Reflexões diárias, cantos gregorianos e práticas devocionais — uma biblioteca espiritual para acompanhar sua fé.">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --gold: #F8E5B0;
+    --gold-light: #FFF5E0;
+    --gold-dark: #8B6914;
+    --gold-warm: #D4A93D;
+    --dark: #160E08;
+    --dark2: #0A0705;
+    --cream: #F5F0E8;
+    --white: #FFFFFF;
+    --muted: #C0B194;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: radial-gradient(ellipse at 50% -10%, #2A1908 0%, #160E08 60%, #0A0705 100%);
+    color: var(--cream); font-family: 'Lora', Georgia, serif;
+    line-height: 1.75; overflow-x: hidden;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 999; opacity: 0.3;
+  }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+  /* ============== HERO ============== */
+  .hero {
+    background: radial-gradient(ellipse at 50% 0%, #2A1908 0%, transparent 70%);
+    padding: 70px 20px 50px; text-align: center; position: relative; overflow: hidden;
+  }
+  .rays {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 800px; height: 280px;
+    pointer-events: none; opacity: 0.06;
+  }
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 22px; position: relative;
+  }
+  .hero-headline {
+    font-family: 'Cinzel', serif; font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900; line-height: 1.2; color: var(--white);
+    max-width: 720px; margin: 0 auto 22px; position: relative;
+    text-shadow: 0 0 30px rgba(248,229,176,0.2);
+  }
+  .hero-headline .gold { color: var(--gold-light); }
+  .hero-sub {
+    font-size: clamp(16px, 2.3vw, 19px); color: #EDDDC0;
+    max-width: 600px; margin: 0 auto 32px; line-height: 1.7;
+    font-style: italic; position: relative;
+  }
+
+  /* ============== ANGEL ILLUSTRATION ============== */
+  .angel-illust {
+    max-width: 380px; margin: 28px auto 0;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid rgba(201,168,76,0.35);
+    box-shadow: 0 0 50px rgba(201,168,76,0.18), 0 18px 40px rgba(0,0,0,0.6);
+    background: #060300;
+  }
+  .angel-illust svg { width: 100%; height: auto; display: block; }
+
+  /* ============== DIVIDER ============== */
+  .star-divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px; margin: 50px auto;
+    max-width: 380px;
+  }
+  .star-divider::before, .star-divider::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
+  }
+  .star-divider span { color: var(--gold); font-size: 18px; }
+
+  /* ============== SECTIONS ============== */
+  section { padding: 40px 0; }
+  h2 {
+    font-family: 'Cinzel', serif; font-size: clamp(22px, 3.5vw, 32px);
+    font-weight: 900; color: var(--white); text-align: center;
+    letter-spacing: 1px; margin-bottom: 18px; line-height: 1.25;
+  }
+  h2 .gold { color: var(--gold-light); }
+  .section-sub {
+    text-align: center; font-style: italic; font-size: 16px;
+    color: var(--muted); max-width: 580px; margin: 0 auto 36px; line-height: 1.7;
+  }
+
+  /* ============== BODY TEXT ============== */
+  .body-p {
+    font-size: clamp(15.5px, 2vw, 17px); line-height: 1.9;
+    color: #D4C9B5; margin-bottom: 22px;
+  }
+  .body-p strong { color: var(--white); font-weight: 600; }
+  .body-p em { color: var(--gold-light); font-style: italic; }
+
+  /* ============== STORY QUOTE ============== */
+  .quote-block {
+    max-width: 600px; margin: 36px auto;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, rgba(15,10,4,0.7) 0%, rgba(21,16,10,0.5) 100%);
+    border-top: 1px solid rgba(201,168,76,0.3);
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    text-align: center;
+  }
+  .quote-text {
+    font-family: 'Lora', serif; font-style: italic;
+    font-size: clamp(17px, 2.3vw, 20px);
+    color: #EDDDC0; line-height: 1.7;
+  }
+  .quote-ref {
+    display: block; margin-top: 14px;
+    font-family: 'Cinzel', serif; font-size: 11px;
+    letter-spacing: 3px; color: var(--gold);
+    text-transform: uppercase; font-style: normal;
+  }
+
+  /* ============== MODULE CARDS ============== */
+  .modules { display: flex; flex-direction: column; gap: 14px; }
+  .module-card {
+    display: flex; align-items: flex-start; gap: 18px;
+    padding: 24px 24px;
+    background: linear-gradient(135deg, #0F0A04 0%, #1A1208 100%);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 8px;
+    transition: border-color 0.25s, transform 0.2s;
+  }
+  .module-card:hover { border-color: rgba(201,168,76,0.55); transform: translateY(-2px); }
+  .module-num {
+    flex: 0 0 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; border: 1.5px solid var(--gold-warm);
+    color: var(--gold-light); font-family: 'Cinzel', serif;
+    font-weight: 900; font-size: 14px; letter-spacing: 1px;
+    background: rgba(201,168,76,0.06);
+  }
+  .module-body { flex: 1; }
+  .module-title {
+    font-family: 'Cinzel', serif; font-size: 17px; font-weight: 700;
+    color: var(--white); letter-spacing: 1px; margin-bottom: 6px;
+  }
+  .module-desc { font-size: 14.5px; line-height: 1.6; color: #C0B194; }
+
+  /* ============== TESTIMONIALS ============== */
+  .testimonials { display: flex; flex-direction: column; gap: 16px; }
+  .testimonial {
+    background: linear-gradient(135deg, #15100A 0%, #0F0A04 100%);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-left: 3px solid var(--gold-warm);
+    border-radius: 6px;
+    padding: 22px 24px;
+  }
+  .testimonial-text {
+    font-style: italic; font-size: 15.5px;
+    line-height: 1.75; color: #EDDDC0; margin-bottom: 12px;
+  }
+  .testimonial-author {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; color: var(--gold);
+  }
+  .testimonial-author .name { color: var(--gold-light); font-weight: 600; }
+
+  /* ============== FEATURES ============== */
+  .features {
+    background: linear-gradient(135deg, #0F0A04 0%, #1A1208 100%);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 8px;
+    padding: 30px 28px;
+  }
+  .features li {
+    list-style: none; padding: 12px 0;
+    border-bottom: 1px dashed rgba(201,168,76,0.15);
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 15.5px; color: #EDDDC0; line-height: 1.55;
+  }
+  .features li:last-child { border-bottom: none; }
+  .features .check {
+    flex-shrink: 0; color: var(--gold-light); font-size: 16px;
+    margin-top: 1px;
+  }
+  .features strong { color: var(--white); font-weight: 600; }
+
+  /* ============== PRICING ============== */
+  .pricing-section {
+    padding: 40px 0;
+  }
+  .pricing-card {
+    max-width: 540px; margin: 0 auto;
+    background: linear-gradient(135deg, #15100A 0%, #1A1208 100%);
+    border: 2px solid var(--gold-dark);
+    border-radius: 12px;
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: 0 0 80px rgba(201,168,76,0.2), 0 25px 60px rgba(0,0,0,0.7);
+    position: relative;
+  }
+  .pricing-card::before {
+    content: ''; position: absolute; inset: -2px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, transparent 0%, rgba(248,229,176,0.4) 50%, transparent 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+  }
+  .pricing-eyebrow {
+    font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 3px;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 14px;
+  }
+  .pricing-title {
+    font-family: 'Cinzel', serif; font-size: 22px; font-weight: 900;
+    color: var(--white); letter-spacing: 1px; margin-bottom: 18px;
+    line-height: 1.3;
+  }
+  .pricing-old { font-size: 14px; color: #B0A088; font-style: italic; margin-bottom: 6px; }
+  .pricing-old span { text-decoration: line-through; color: #C0392B; }
+  .pricing-now {
+    display: flex; align-items: flex-start; justify-content: center;
+    gap: 2px; margin: 10px 0 12px;
+    font-family: 'Cinzel', serif; color: var(--gold-light);
+    text-shadow: 0 0 30px rgba(248,229,176,0.5);
+  }
+  .pricing-currency { font-size: 32px; font-weight: 700; margin-top: 10px; }
+  .pricing-amount { font-size: 86px; font-weight: 900; line-height: 1; letter-spacing: -2px; }
+  .pricing-tag {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px;
+    color: var(--gold); margin-bottom: 26px; text-transform: uppercase;
+  }
+  .pricing-features { text-align: left; max-width: 380px; margin: 0 auto 28px; }
+  .pricing-features li {
+    list-style: none; padding: 8px 0; font-size: 14.5px;
+    color: #D4C9B5; line-height: 1.55;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #F8E5B0 0%, #C9A84C 100%);
+    color: #160E08; font-family: 'Cinzel', serif;
+    font-size: clamp(15px, 2.3vw, 19px); font-weight: 900;
+    padding: 20px 36px; border-radius: 6px;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    box-shadow: 0 8px 30px rgba(212,169,61,0.5), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none; cursor: pointer;
+    width: 100%; max-width: 460px;
+    position: relative; overflow: hidden;
+  }
+  .cta-btn::before {
+    content: ''; position: absolute; top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 3s infinite;
+  }
+  @keyframes shimmer { 0% { left: -100%; } 60% { left: 200%; } 100% { left: 200%; } }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(212,169,61,0.65); }
+  .cta-btn-sub {
+    display: block; font-family: 'Lora', serif;
+    font-size: 12px; font-style: italic; margin-top: 5px;
+    text-transform: none; letter-spacing: 0; color: #1d1408; opacity: 0.9;
+  }
+  .pricing-secure { margin-top: 16px; font-size: 12px; color: #8E7C66; font-style: italic; }
+
+  /* ============== GUARANTEE ============== */
+  .guarantee-box {
+    max-width: 580px; margin: 40px auto;
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 10px;
+    padding: 30px 28px;
+    text-align: center;
+  }
+  .guarantee-icon { font-size: 36px; margin-bottom: 14px; }
+  .guarantee-title {
+    font-family: 'Cinzel', serif; font-size: 16px; letter-spacing: 2px;
+    color: var(--gold-light); text-transform: uppercase; margin-bottom: 14px;
+  }
+  .guarantee-text { font-size: 14.5px; color: var(--muted); line-height: 1.75; }
+
+  /* ============== FAQ ============== */
+  .faq-item {
+    background: linear-gradient(135deg, #0F0A04 0%, #15100A 100%);
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .faq-q {
+    width: 100%; padding: 18px 22px;
+    background: transparent; border: none; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    text-align: left; color: var(--white);
+    font-family: 'Cinzel', serif; font-size: 14.5px;
+    font-weight: 700; letter-spacing: 0.5px;
+  }
+  .faq-q::after {
+    content: '+'; color: var(--gold); font-size: 22px; font-weight: 400;
+    transition: transform 0.25s;
+  }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+  .faq-a {
+    display: none; padding: 0 22px 20px 22px;
+    font-size: 14.5px; line-height: 1.75; color: #C0B194;
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ============== FOOTER ============== */
+  .site-footer {
+    background: #0A0705;
+    border-top: 1px solid rgba(201,168,76,0.12);
+    padding: 36px 24px 32px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .disclaimer {
+    max-width: 680px; margin: 0 auto 18px;
+    font-size: 12px; color: #8E7C66; line-height: 1.7;
+    font-style: italic;
+  }
+  .disclaimer strong { color: #B5A37F; font-style: normal; }
+  .site-footer p { font-size: 12px; color: #5a4e3e; line-height: 1.6; margin: 4px 0; }
+  .site-footer a { color: var(--gold-dark); text-decoration: none; margin: 0 6px; }
+  .site-footer a:hover { color: var(--gold); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 50px 16px 36px; }
+    section { padding: 28px 0; }
+    .module-card { padding: 20px 18px; gap: 14px; }
+    .pricing-card { padding: 32px 22px; }
+    .pricing-amount { font-size: 70px; }
+    .quote-block { padding: 22px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============== HERO ============== -->
+<header class="hero">
+  <svg class="rays" viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g transform="translate(400,0)">
+      <line x1="0" y1="0" x2="-400" y2="280" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="-260" y2="280" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="-130" y2="280" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="0"    y2="280" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="130"  y2="280" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="260"  y2="280" stroke="#C9A84C" stroke-width="1"/>
+      <line x1="0" y1="0" x2="400"  y2="280" stroke="#C9A84C" stroke-width="1"/>
+    </g>
+  </svg>
+
+  <p class="hero-eyebrow">✦ Guia Devocional Cristão ✦</p>
+  <h1 class="hero-headline">
+    Um guia espiritual para acompanhar seu caminho de <span class="gold">oração e devoção cristã</span>
+  </h1>
+  <p class="hero-sub">
+    Reflexões sobre os anjos da guarda, cantos gregorianos antigos e práticas devocionais —
+    reunidos em um único guia digital.
+  </p>
+</header>
+
+<div class="container">
+
+  <!-- ============== STORY / INTRO ============== -->
+  <section>
+    <p class="body-p">
+      Durante séculos, os fiéis cristãos têm buscado aprofundar sua vida espiritual através da <strong>oração silenciosa</strong>, da <strong>leitura reflexiva das Escrituras</strong> e da <strong>tradição dos cantos sagrados</strong>.
+    </p>
+    <p class="body-p">
+      Mas no ritmo do mundo moderno, encontrar tempo e materiais devocionais bem organizados tornou-se difícil. As práticas que durante gerações acompanharam a família católica —
+      <em>a oração matutina, o rosário, a leitura do Evangelho, os hinos antigos</em>
+      — muitas vezes se perdem em meio ao barulho diário.
+    </p>
+
+    <div class="quote-block">
+      <p class="quote-text">
+        "Pois aos seus anjos dará ordens a teu respeito, para te guardar em todos os teus caminhos."
+      </p>
+      <span class="quote-ref">— Salmo 91:11</span>
+    </div>
+
+    <p class="body-p">
+      Esta guía nació de una intención simple: <strong>reunir en un solo lugar</strong> los textos, audios y reflexiones que pueden acompañar tu vida devocional diaria — sin convertir la espiritualidad en una tarea más, sino en un refugio.
+    </p>
+    <p class="body-p">
+      No es un curso con calendario. No es una promesa de resultados específicos. Es simplemente <em>una biblioteca cristiana</em> que puedes abrir en cualquier momento, en cualquier dispositivo, a tu propio ritmo.
+    </p>
+  </section>
+
+  <div class="star-divider"><span>★</span></div>
+
+  <!-- ============== WHAT'S INSIDE ============== -->
+  <section>
+    <h2>Lo que <span class="gold">encontrarás</span></h2>
+    <p class="section-sub">Cuatro módulos devocionales más una biblioteca completa de cantos gregorianos.</p>
+
+    <div class="modules">
+      <article class="module-card">
+        <span class="module-num">I</span>
+        <div class="module-body">
+          <h3 class="module-title">El Llamado del Ángel de la Guarda</h3>
+          <p class="module-desc">Una introducción reflexiva a la tradición cristiana de los ángeles de la guarda — con oraciones, pasajes bíblicos y meditaciones inspiradas en la espiritualidad de San Padre Pío.</p>
+        </div>
+      </article>
+
+      <article class="module-card">
+        <span class="module-num">II</span>
+        <div class="module-body">
+          <h3 class="module-title">El Canto de lo Divino</h3>
+          <p class="module-desc">Biblioteca de cantos gregorianos en audio descargable. Ideal para acompañar momentos de oración, silencio interior o lectura espiritual.</p>
+        </div>
+      </article>
+
+      <article class="module-card">
+        <span class="module-num">III</span>
+        <div class="module-body">
+          <h3 class="module-title">La Revelación del Mar Muerto</h3>
+          <p class="module-desc">Reflexiones inspiradas en los antiguos textos del Mar Muerto, la sabiduría del desierto y la tradición monástica cristiana.</p>
+        </div>
+      </article>
+
+      <article class="module-card">
+        <span class="module-num">IV</span>
+        <div class="module-body">
+          <h3 class="module-title">Ritual del Cuerpo Divino</h3>
+          <p class="module-desc">Prácticas devocionales para integrar la oración en tu rutina diaria — respiración consciente, lectura reflexiva, silencio y agradecimiento.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="star-divider"><span>★</span></div>
+
+  <!-- ============== WHO IS THIS FOR ============== -->
+  <section>
+    <h2>¿Para <span class="gold">quién</span> es esta guía?</h2>
+    <p class="section-sub">Para personas que desean profundizar su vida espiritual cristiana.</p>
+
+    <ul class="features">
+      <li><span class="check">✓</span><span>Para quienes desean <strong>profundizar su vida de oración</strong> diaria con material organizado</span></li>
+      <li><span class="check">✓</span><span>Para quienes buscan <strong>momentos de silencio y meditación</strong> acompañados por cantos gregorianos</span></li>
+      <li><span class="check">✓</span><span>Para quienes valoran la <strong>devoción a los ángeles y a los santos</strong>, especialmente San Padre Pío y el Arcángel Miguel</span></li>
+      <li><span class="check">✓</span><span>Para familias que quieren <strong>compartir prácticas devocionales en casa</strong></span></li>
+      <li><span class="check">✓</span><span>Para quienes desean un recurso <strong>simple, digital y accesible</strong> desde cualquier dispositivo</span></li>
+    </ul>
+  </section>
+
+  <div class="star-divider"><span>★</span></div>
+
+  <!-- ============== TESTIMONIALS ============== -->
+  <section>
+    <h2>Lo que <span class="gold">comparten</span> los lectores</h2>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "Encontré en esta guía una compañía silenciosa para mis mañanas de oración. Los cantos gregorianos especialmente me ayudan a centrarme antes de empezar el día."
+        </p>
+        <div class="testimonial-author">
+          <span>✦</span><span class="name">María G.</span><span>— Sevilla, España</span>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "Como católica practicante, aprecio que el material respete profundamente la tradición. Las reflexiones sobre los ángeles de la guarda son hermosas y fieles a la enseñanza de la Iglesia."
+        </p>
+        <div class="testimonial-author">
+          <span>✦</span><span class="name">Carmen R.</span><span>— Ciudad de México</span>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "Lo uso en familia. Mis hijos escuchan los cantos antes de dormir. Es un recurso simple pero significativo para mantener viva nuestra fe en casa."
+        </p>
+        <div class="testimonial-author">
+          <span>✦</span><span class="name">José A.</span><span>— Bogotá, Colombia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="star-divider"><span>★</span></div>
+
+  <!-- ============== PRICING ============== -->
+  <section class="pricing-section">
+    <h2>Acceso <span class="gold">instantáneo</span></h2>
+    <p class="section-sub">Un único pago. Acceso de por vida. Garantía de 60 días.</p>
+
+    <div class="pricing-card">
+      <p class="pricing-eyebrow">✦ Oferta de Lanzamiento ✦</p>
+      <h3 class="pricing-title">Guía Devocional Cristiana Completa</h3>
+
+      <p class="pricing-old">Valor regular: <span>$97.00</span></p>
+      <div class="pricing-now">
+        <span class="pricing-currency">$</span><span class="pricing-amount">50</span>
+      </div>
+      <p class="pricing-tag">Pago único · Acceso instantáneo</p>
+
+      <ul class="pricing-features">
+        <li>✓ Módulo I — El Llamado del Ángel de la Guarda (PDF completo)</li>
+        <li>✓ Módulo II — Biblioteca de cantos gregorianos (audio descargable)</li>
+        <li>✓ Módulo III — La Revelación del Mar Muerto</li>
+        <li>✓ Módulo IV — Ritual del Cuerpo Divino</li>
+        <li>✓ PDFs descargables para lectura sin conexión</li>
+        <li>✓ Acceso desde teléfono, tablet o computadora</li>
+        <li>✓ Acceso de por vida — sin renovaciones</li>
+      </ul>
+
+      <button class="cta-btn" type="button">
+        ✦ ACCEDER A LA GUÍA — $50 ✦
+        <span class="cta-btn-sub">Pago seguro · Acceso instantáneo · Garantía de 60 días</span>
+      </button>
+      <p class="pricing-secure">🔒 Pago seguro — tu información está protegida</p>
+    </div>
+  </section>
+
+  <!-- ============== GUARANTEE ============== -->
+  <section>
+    <div class="guarantee-box">
+      <div class="guarantee-icon">🛡️</div>
+      <p class="guarantee-title">Garantía de 60 Días</p>
+      <p class="guarantee-text">
+        Si en los próximos 60 días sientes que esta guía no es lo que esperabas, escríbenos y te devolvemos el 100% de lo pagado.
+        Sin preguntas. Sin demoras. Sin complicaciones.
+      </p>
+    </div>
+  </section>
+
+  <div class="star-divider"><span>★</span></div>
+
+  <!-- ============== FAQ ============== -->
+  <section>
+    <h2>Preguntas <span class="gold">frecuentes</span></h2>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">¿Es solo para católicos?</button>
+      <div class="faq-a">
+        El material está inspirado en la tradición cristiana — principalmente católica y ortodoxa — pero los temas (oración, reflexión sobre los Salmos, devoción a los santos, cantos sagrados) son apreciados por cristianos de muchas denominaciones. Cualquier persona con interés en la espiritualidad cristiana puede usar la guía.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">¿Cómo recibo el acceso?</button>
+      <div class="faq-a">
+        Inmediatamente después del pago, recibirás un correo con el enlace de acceso a la plataforma. Allí podrás leer los módulos en línea o descargar los PDFs y audios para usar sin conexión.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">¿Funciona en mi teléfono?</button>
+      <div class="faq-a">
+        Sí. La guía funciona en cualquier dispositivo con navegador moderno — teléfono, tablet o computadora. Los PDFs y audios pueden descargarse para uso sin internet.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">¿Es un curso con clases programadas?</button>
+      <div class="faq-a">
+        No. Es una <strong>biblioteca devocional</strong>: tú decides cuándo, cómo y cuánto leer. No hay horarios, calificaciones ni clases en vivo. El ritmo es tuyo.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">¿Promete algún resultado específico?</button>
+      <div class="faq-a">
+        No. Este es material <strong>devocional y educativo</strong>. No promete resultados financieros, materiales ni espirituales específicos. La vida espiritual es personal — esta guía simplemente te ofrece recursos cristianos organizados para acompañar tu propio camino.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">¿Y si no me gusta?</button>
+      <div class="faq-a">
+        Tienes 60 días para revisar todo el material. Si no te resulta útil, escribes a nuestro correo de soporte y te devolvemos el 100% del pago, sin necesidad de explicar el motivo.
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============== FOOTER ============== -->
+<footer class="site-footer">
+  <p class="disclaimer">
+    <strong>Aviso:</strong> Este producto es material <strong>educativo y devocional</strong> de carácter inspiracional, basado en la tradición cristiana. No sustituye la orientación pastoral, religiosa, médica o psicológica de un profesional. No prometemos resultados financieros, materiales ni espirituales específicos. Los resultados de la vida espiritual son personales y dependen de cada lector.
+  </p>
+  <p class="disclaimer">
+    Meta (Facebook, Instagram), Google y cualquier otra plataforma de publicidad <strong>no están afiliados</strong> a este producto, no lo respaldan y no son responsables por su contenido.
+  </p>
+  <p>
+    © 2026 Guía Devocional Cristiana · Todos os direitos reservados<br>
+    <a href="#">Termos de Uso</a> ·
+    <a href="#">Política de Privacidade</a> ·
+    <a href="#">Política de Reembolso</a> ·
+    <a href="#">Suporte</a>
+  </p>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.closest('.faq-item');
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
