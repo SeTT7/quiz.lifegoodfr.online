@@ -1,18 +1,33 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
 <title>Revela Seu Anjo da Guarda — Quiz Sagrado</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1468329457735681');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1468329457735681&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
 var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-
   ttq.load('D8LLNKBC77U580P27IB0');
   ttq.page();
 }(window, document, 'ttq');
@@ -548,19 +563,17 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
           </span>
           <span class="object-label">Trombeta</span>
         </button>
-        <button class="object-card" type="button" data-value="harp">
-          <span class="object-icon">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 56 L16 12 C16 12, 32 8, 48 20 L48 56"/>
-              <line x1="16" y1="56" x2="48" y2="56"/>
-              <line x1="22" y1="22" x2="22" y2="52"/>
-              <line x1="29" y1="18" x2="29" y2="52"/>
-              <line x1="36" y1="20" x2="36" y2="52"/>
-              <line x1="43" y1="26" x2="43" y2="52"/>
-            </svg>
-          </span>
-          <span class="object-label">Harpa</span>
-        </button>
+        <button class="object-card" type="button" data-value="torch">
+        <span class="object-icon">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="28" y="40" width="8" height="20" rx="2" fill="currentColor" fill-opacity="0.3" stroke-width="1.8"/>
+            <path d="M24 38 L40 38 L38 44 L26 44 Z" fill="currentColor" fill-opacity="0.4" stroke-width="1.5"/>
+            <path d="M26 38 C22 30, 20 20, 26 12 C28 20, 32 14, 32 8 C36 14, 36 20, 38 12 C44 20, 42 30, 38 38 Z" fill="currentColor" fill-opacity="0.35" stroke-width="1.5"/>
+            <path d="M28 36 C26 28, 27 20, 30 14 C32 20, 32 26, 34 20 C36 26, 36 30, 34 36 Z" fill="currentColor" fill-opacity="0.6" stroke-width="0" stroke="none"/>
+          </svg>
+        </span>
+        <span class="object-label">Uma Tocha</span>
+      </button>
         <button class="object-card" type="button" data-value="fish">
           <span class="object-icon">
             <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
@@ -732,7 +745,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     setTimeout(function() {
       var qs = window.location.search || '';
-      window.location.href = '../resultangel7br/index.html' + qs;
+      var ANGEL_MAP = { sword: 'michael', trumpet: 'gabriel', fish: 'raphael', torch: 'uriel', harp: 'uriel' };
+      var angel = ANGEL_MAP[state.answers.vision] || 'michael';
+      var qs2 = window.location.search ? '&' + window.location.search.slice(1) : '';
+      window.location.href = '../resultangel7br/?angel=' + angel + qs2;
     }, 5500);
   }
 </script>
